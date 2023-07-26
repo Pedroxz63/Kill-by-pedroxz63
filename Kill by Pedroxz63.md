@@ -1,129 +1,159 @@
 local ScreenGui = Instance.new("ScreenGui")
-local ui = Instance.new("Frame")
-local title = Instance.new("TextLabel")
 local Frame = Instance.new("Frame")
-local Username = Instance.new("TextBox")
-local Kill = Instance.new("TextButton")
-local cred = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextButton_2 = Instance.new("TextButton")
+local WalkSpeedControl = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local Label = Instance.new("TextLabel")
+local Open = Instance.new("TextButton")
+ 
 --Properties:
-ScreenGui.Parent = game:GetService("CoreGui")
+ 
+ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
  
-ui.Name = "ui"
-ui.Parent = ScreenGui
-ui.Active = true
-ui.BackgroundColor3 = Color3.new(1, 1, 1)
-ui.BackgroundTransparency = 0.20000000298023
-ui.BorderSizePixel = 3
-ui.Position = UDim2.new(0.254972845, 0, 0.419703096, 0)
-ui.Size = UDim2.new(0, 535, 0, 283)
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Frame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame.BorderSizePixel = 3
+Frame.Position = UDim2.new(0.382299274, 0, 0.270377755, 0)
+Frame.Size = UDim2.new(0, 257, 0, 231)
+Frame.Active = true
+Frame.Draggable = true
  
-title.Name = "title"
-title.Parent = ui
-title.BackgroundColor3 = Color3.new(1, 1, 1)
-title.BackgroundTransparency = 1
-title.BorderSizePixel = 2
-title.Position = UDim2.new(0, 0, 0.0199999996, 0)
-title.Size = UDim2.new(1, 0, 0, 50)
-title.Font = Enum.Font.SourceSans
-title.Text = "Player Kill"
-title.TextColor3 = Color3.new(0, 0, 0)
-title.TextScaled = true
-title.TextSize = 14
-title.TextWrapped = true
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+TextButton.BorderSizePixel = 3
+TextButton.Position = UDim2.new(0.71206224, 0, 0.63203454, 0)
+TextButton.Size = UDim2.new(0, 74, 0, 73)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "+"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
  
-Frame.Parent = title
-Frame.BackgroundColor3 = Color3.new(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.25, 0, 0.860000014, 0)
-Frame.Size = UDim2.new(0.5, 0, 0, 3)
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.33073929, 0, 0.29437235, 0)
+TextLabel.Size = UDim2.new(0, 87, 0, 70)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "16"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
  
-Username.Name = "Username"
-Username.Parent = ui
-Username.BackgroundColor3 = Color3.new(1, 1, 1)
-Username.BorderSizePixel = 0
-Username.Position = UDim2.new(0.100000001, 0, 0.300000012, 0)
-Username.Size = UDim2.new(0.800000012, 0, 0, 50)
-Username.Font = Enum.Font.SourceSans
-Username.PlaceholderText = "Nome Do Player"
-Username.Text = ""
-Username.TextColor3 = Color3.new(0, 0, 0)
-Username.TextScaled = true
-Username.TextSize = 14
-Username.TextWrapped = true
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_2.BorderSizePixel = 3
+TextButton_2.Position = UDim2.new(0, 0, 0.63203454, 0)
+TextButton_2.Size = UDim2.new(0, 74, 0, 73)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "-"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
  
-Kill.Name = "Matar Player"
-Kill.Parent = ui
-Kill.BackgroundColor3 = Color3.new(1, 1, 1)
-Kill.BackgroundTransparency = 0.20000000298023
-Kill.BorderSizePixel = 2
-Kill.Position = UDim2.new(0.25, 0, 0.529999971, 0)
-Kill.Size = UDim2.new(0.5, 0, 0, 50)
-Kill.Font = Enum.Font.Gotham
-Kill.Text = "Matar"
-Kill.TextColor3 = Color3.new(0, 0, 0)
-Kill.TextScaled = true
-Kill.TextSize = 14
-Kill.TextWrapped = true
+WalkSpeedControl.Name = "WalkSpeed Control"
+WalkSpeedControl.Parent = Frame
+WalkSpeedControl.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+WalkSpeedControl.BorderSizePixel = 3
+WalkSpeedControl.Position = UDim2.new(0.000976324081, 0, -0.00234955549, 0)
+WalkSpeedControl.Size = UDim2.new(0, 257, 0, 59)
+WalkSpeedControl.Font = Enum.Font.Highway
+WalkSpeedControl.Text = "Walkspeed Control"
+WalkSpeedControl.TextColor3 = Color3.fromRGB(0, 0, 0)
+WalkSpeedControl.TextScaled = true
+WalkSpeedControl.TextSize = 14.000
+WalkSpeedControl.TextWrapped = true
  
-cred.Name = "cred"
-cred.Parent = ui
-cred.BackgroundColor3 = Color3.new(1, 1, 1)
-cred.BackgroundTransparency = 1
-cred.BorderSizePixel = 2
-cred.Position = UDim2.new(0.0500000007, 0, 0.769999981, 0)
-cred.Size = UDim2.new(0.899999976, 0, 0, 50)
-cred.Font = Enum.Font.SourceSans
-cred.Text = "Creditos: ! Pedroxz63.xit#8733"
-cred.TextColor3 = Color3.new(0, 0, 0)
-cred.TextScaled = true
-cred.TextSize = 14
-cred.TextWrapped = true
-ui.Draggable = true
+Close.Name = "Close"
+Close.Parent = Frame
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.Position = UDim2.new(1, 0, -0.0259740278, 0)
+Close.Size = UDim2.new(0, 63, 0, 69)
+Close.Style = Enum.ButtonStyle.RobloxButtonDefault
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
  
--- creds to Hamiii for the plr finder
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local function RemoveSpaces(String)
-	return String:gsub("%s+", "") or String
+Label.Name = "Label"
+Label.Parent = Frame
+Label.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Label.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Label.BorderSizePixel = 3
+Label.Position = UDim2.new(0, 0, 0.99999994, 0)
+Label.Size = UDim2.new(0, 257, 0, 50)
+Label.Font = Enum.Font.Highway
+Label.Text = "Made by Roblox Scripter"
+Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Label.TextScaled = true
+Label.TextSize = 14.000
+Label.TextWrapped = true
+ 
+Open.Name = "Open"
+Open.Parent = ScreenGui
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.Position = UDim2.new(-0.00074955821, 0, 0.520874739, 0)
+Open.Size = UDim2.new(0, 200, 0, 50)
+Open.Style = Enum.ButtonStyle.RobloxButton
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+ 
+-- Scripts:
+ 
+local function QDTZQ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+ 
+	local label = script.Parent.Parent.TextLabel --- defines the number
+ 
+ 
+	script.Parent.MouseButton1Click:Connect(function() --- when the button is clicked it calls this function
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed +5--- defines the player and addition to walk speed
+		label.Text = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed --- tells the text label that displays walk speed to update
+	end)
 end
+coroutine.wrap(QDTZQ_fake_script)()
+local function UCADA_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
  
-local function FindPlayer(String)
-	String = RemoveSpaces(String)
-	for _, _Player in pairs(Players:GetPlayers()) do
-		if _Player.Name:lower():match('^'.. String:lower()) then
-			return _Player
-		end
-	end
-	return nil
+	local label = script.Parent.Parent.TextLabel --- defines the number
+ 
+ 
+	script.Parent.MouseButton1Click:Connect(function() --- when the button is clicked it calls this function
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed -5--- defines the player and addition to walk speed
+		label.Text = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed --- tells the text label that displays walk speed to update
+	end)
 end
+coroutine.wrap(UCADA_fake_script)()
+local function YDSA_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
  
-Kill.MouseButton1Click:Connect(function()
-	local Target = FindPlayer(Username.Text)
-	if Target and Target.Character then
-		local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-		local Torso = Character:FindFirstChild("Torso") or Character:FindFirstChild("UpperTorso")
+	script.Parent.Parent.Visible = false
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible =  false
+		script.Parent.Parent.Parent.Open.Visible = true
+	end)
+end
+coroutine.wrap(YDSA_fake_script)()
+local function ZFFOR_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
  
-		local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
-	    Torso.Anchored = true
-	    local tool = Instance.new("Tool", LocalPlayer.Backpack)
-	    local hat = LocalPlayer.Character:FindFirstChildOfClass("Accessory")
-	    local hathandle = hat.Handle
-	    hathandle.Parent = tool
-	    hathandle.Massless = true
-	    tool.GripPos = Vector3.new(0, 9e99, 0)
-	    tool.Parent = LocalPlayer.Character
-	    repeat wait() until LocalPlayer.Character:FindFirstChildOfClass("Tool") ~= nil
-	    tool.Grip = CFrame.new(Vector3.new(0, 0, 0))
-		Torso.Anchored = false
-	    repeat LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = Target.Character:FindFirstChild("HumanoidRootPart").CFrame wait()
-	    until Target.Character == nil or Target.Character:FindFirstChild("Humanoid").Health <= 0 or LocalPlayer.Character == nil or LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 0 or (Target.Character:FindFirstChild("HumanoidRootPart").Velocity.magnitude - Target.Character:FindFirstChild("Humanoid").WalkSpeed) > (Target.Character:FindFirstChild("Humanoid").WalkSpeed + 20)
-	    LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
-	    hathandle.Parent = hat
-	    hathandle.Massless = false
-	    tool:Destroy()
-	    LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
-	else
-		warn'no player found named like that or he has no char'
-	end
-end)
+	script.Parent.Visible = true
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.Frame.Visible = true
+	end)
+end
+coroutine.wrap(ZFFOR_fake_script)()
